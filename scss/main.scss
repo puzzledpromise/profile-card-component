@@ -4,6 +4,7 @@ $dark2: hsl(229, 23%, 23%);
 $grayish: hsl(227, 10%, 46%);
 
 $neutral: hsl(0, 0%, 59%);
+$line-color: #E8E9EC;
 
 // Reset
 
@@ -13,6 +14,7 @@ $neutral: hsl(0, 0%, 59%);
     box-sizing: border-box;
 }
 
+
 body{
     height: 100vh;
     width: 100%;
@@ -21,35 +23,36 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Kumbh Sans', sans-serif;
 
     .top  {
       img{
-          position: fixed;
+          position: absolute;
           top: -300px;
           left: -300px;
-          width: 900px;
-          z-index: 0;
+          z-index: -1;
       }
+
     }
 
     .bottom {
         img {
-            position: fixed;
+            position: absolute;
             bottom: -420px;
             right:  -150px;
-            width: 900px;
             z-index: -1;
         }
 
     }
 
     .card{
-        width: 400px;
+        width: 350px;
         box-shadow: 10px 10px 46px -15px rgba(0,0,0,0.75);
+        border-radius: 15px;
 
         &-pattern{
             background: url('../images/bg-pattern-card.svg');
-            height: 150px;
+            height: 140px;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
@@ -79,24 +82,81 @@ body{
 
             .details{
                 margin-top: -45px;
+
+                .age{
+                    color: $grayish;
+                    font-weight: 400;
+                }
+
+                h3.location {
+                    color: $grayish;
+                    font-weight: 400;
+                    padding-top: 0.5rem;
+                }
             }
         }
 
 
 
         &-bottom {
-            border-top: 1px solid $neutral;
+            border-top: 1px solid $line-color;
             display: flex;
-            height: 100px;
+            height: 90px;
             justify-content: space-around;
             align-items: flex-end;
             padding-bottom: 25px;
             background-color: white;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+
+            .stat{
+                text-align: center;
+
+                &-big{
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                &-small {
+                    padding-top: 8px;
+                    font-size: 10px;
+                    font-weight: 400;
+                    color: $grayish;
+                }
+            }
         }
     }
 }
 
 
+@media(max-width: 768px){
+  body{
 
+      .card {
+          width: 326px;
+      }
+  }
+}
+
+@media(max-height: 376px){
+    body {
+
+
+
+
+        .card {
+            &-pattern {
+                height: 100px;
+            }
+
+            &-top {
+                height: 130px;
+            }
+
+            &-bottom {
+                height: 80px;
+                padding-bottom: 10px;
+
+            }
+        }
+    }
+}

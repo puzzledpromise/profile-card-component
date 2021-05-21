@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px; text-align: center; margin-top: 15px; }
+    .attribution a { color: #29205c; }
+    .attribution div {
+        display: block;
+        color: rgba(255, 255, 255, 0.49);
+    }
   </style>
 </head>
 <body>
@@ -31,8 +36,8 @@
     <div class="card-top">
       <img src="images/image-victor.jpg" alt="">
         <div class="details">
-          <h2>Victor Crest 26</h2>
-          <h3>London</h3>
+          <h2>Victor Crest <span class="age">26</span></h2>
+          <h3 class="location">London</h3>
         </div>
 
 
@@ -41,22 +46,22 @@
 
     <div class="card-bottom">
         <div class="stat">
-          80K
-          Followers
+          <div class="stat-big">80K</div>
+          <div class="stat-small">Followers</div>
         </div>
       <div class="stat">
-        803K
-        Likes
+        <div class="stat-big">803K</div>
+        <div class="stat-small">Likes</div>
       </div>
     <div class="stat">
-      1.4K
-      Photos
+      <div class="stat-big">1.4K</div>
+      <div class="stat-small">Photos</div>
     </div>
     </div>
   </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </div>
+    <div>Coded by <a href="#https://github.com/puzzledpromise/profile-card-component">Puzzled Promise</a>.</div>
   </div>
 </body>
 </html>
